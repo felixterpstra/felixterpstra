@@ -1,0 +1,42 @@
+---
+title: 'Goodnest — Felix Terpstra'
+---
+
+.position-indicator
+  .indicator
+  .indicator.active
+  .indicator
+  .indicator
+  .indicator
+
+.article-header
+  .site-width
+    .article-header-container
+      .article-header-title Goodnest
+      .article-header-description Goodnest is a web application that makes it easy for people to get their houses cleaned. Customers use the website to book a job, giving details on house size and date.<br/>Behind the scenes our pool of cleaners tender for the job, and if they are successful they clean the customer's house.
+    .image.article-header-image
+.article-body
+  .site-width
+    .article-title Three Distinct Users
+    .columns
+      .column
+        %p Three main groups of users interact with the product: Customers, cleaners and administrators. It was important to understand what each user was trying to achieve and what they needed to be informed of, and to design interfaces that met these requirements.
+        %p I started by listing the goals for each user group. Customers would want a no-fuss way to book their cleans, and a simple way to manage them once they were booked in. They don’t want to spend a lot of time in the app.
+        %p Cleaners required a more complicated interface. They need to see a list of available jobs and apply for them, see which jobs they had applied for and which had been confirmed, and a history of jobs they’d completed.
+      .column.last
+        %p Finally, administrators needed an overview of the whole system in action with the ability to fix problems as they arose and deal with the business processes required to keep the service running.
+        %p Given the goals of each group, I mapped out the information architecture of the app using flow diagrams, organised by views, to give a clear idea of where particular features would fit in relation to each other.
+        %p This made actually designing the interfaces far simpler, as there was a defined list of features each view needed to contain, and the broad context of where each fitted within the app.
+    .divider
+      .icon
+    .article-title Booking a Job
+    .hover-animation{data: {expandable: true, bg: true}}
+      .image.full-width
+        = image_tag 'goodnest/merch-dash.png'
+    .image-caption The first step of booking a new cleaning job where customers select the number of bed and bathrooms in their house.
+    .columns
+      .column
+        %p A customer booking a job is the most important part aspect of the application, and is the first step in the overall cleaning process. Therefore it was crucial to get it right.
+        %p My first approach was a two step process, starting with house details and timing, and then moving on to payment details. As this was being designed we discovered more and more things we needed to ask the customer, and the length soon became unwieldy.
+      .column.last
+        %p The first concern with any checkout is customer drop-off—that is, customers leaving the process midway through, without completing. A major cause of this is perceived effort. If there are a long list of complicated fields to fill out it’s much more likely a customer will give up and leave (think of how annoying online questionnaires are!). The long initial step needed to be broken up into parts.

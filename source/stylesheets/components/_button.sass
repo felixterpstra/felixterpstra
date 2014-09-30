@@ -1,0 +1,22 @@
+.btn-primary
+  background: white
+  padding: 14px 20px
+  display: inline-block
+  margin: 0 auto
+  +border-radius(4px)
+  .icon
+    background: image-url('svg/icon-medium-book.svg') no-repeat
+    width: 17px
+    height: 15px
+    float: left
+    margin-right: 10px
+    position: relative
+    top: 1px
+  span
+    float: left
+    color: $color-default-font
+    &:link, &:visited, &:hover, &:active
+      text-decoration: none
+
+.btn-disabled
+  opacity: 0.5

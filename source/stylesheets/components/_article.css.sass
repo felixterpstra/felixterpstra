@@ -1,0 +1,129 @@
+.position-indicator
+  position: fixed
+  top: 50%
+  // background: rgba(255,255,255,0.9)
+  padding: 10px
+  .indicator
+    background: #cbcbcb
+    width: 3px
+    height: 20px
+    display: block
+    margin-bottom: 6px
+  .active
+    background: #666666
+    width: 4px
+
+.divider
+  display: block
+  width: 100%
+  height: 15px
+  border-bottom: 1px solid #eef2f5
+  clear: both
+  padding: 40px 0 0 0
+  .icon
+    background: image-url('divider-icon@2x.png')
+    background-size: 100% 100%
+    width: 90px
+    height: 30px
+    margin: 0 auto
+    display: block
+    position: relative
+    top: -15px
+
+.article-header
+  background: rgb(240,240,240)
+  height: 560px
+  padding: 160px 0 0 0
+
+.article-header-container
+  +span(9 of 20)
+
+.article-header-title
+  font-size: 46px
+  font-weight: 300
+  margin-bottom: 20px
+  color: rgb(50,50,50)
+
+.article-header-image
+  +span(last 10 of 20)
+  background: image-url('goodnest/header-image.jpg') no-repeat
+  background-size: 100% auto
+  height: 400px
+
+.article-header-description
+  font-size: 15px
+  line-height: 24px
+  color: rgb(50,50,50)
+
+.article-title
+  font-size: 44px
+  font-weight: 300
+  margin-bottom: 20px
+  color: $color-article-title
+  text-align: center
+  padding: 140px 0 40px 0
+  clear: both
+
+.columns
+  display: block
+  clear: both
+  .column
+    +span(1 of 2)
+    margin-right: gutter(60px)
+    font-size: 15px
+    line-height: 24px
+    color: rgb(50,50,50)
+    &.last
+      margin-right: 0
+
+.image
+  img
+    width: 100%
+    height: auto
+  &.full-width
+    width: 100%
+
+.hover-animation
+  display: block
+  cursor: pointer
+  height: 340px
+  z-index: 2
+  position: relative
+  +perspective(1000)
+  .image
+    overflow: hidden
+    position: absolute
+    transform-origin: 50% 0
+    height: 340px
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 340px, 0 340px)
+    +transition(all 300ms cubic-bezier(0.250, 0.250, 0.390, 1.610))
+    &:hover
+      transform: rotateX(5deg)
+  &.active
+    .image
+      width: 100%
+      height: auto
+      +transform(translateY(-200px) scale(1.1))
+      height: 100%
+      // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+      &:hover
+        +transform(translateY(-200px) scale(1.1))
+
+.bg
+  background: black
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1
+
+.image-caption
+  width: 80%
+  margin: 0 auto
+  display: block
+  clear: both
+  color: $color-image-caption
+  font-style: italic
+  font-size: 13px
+  padding: 20px 0 50px 0

@@ -1,0 +1,50 @@
+// COLORS
+
+$color-default-font: rgb(50,50,50)
+$color-article-title: #00468a
+$color-image-caption: #465966
+
+$color-goodnest: rgb(252,208,20)
+$color-popin: #c22727
+
+// SUSY
+
+
+
+// STRUCTURE
+
+*
+  box-sizing: border-box
+
+// FONT
+
+body
+  -webkit-font-smoothing: antialiased
+  font-family: 'Whitney SSm A', 'Whitney SSm B', "Helvetica Neue", "Helvetica", "Arial" sans-serif
+  font-weight: 400
+
+.logo
+  font-size: 20px
+  font-weight: 900
+
+@mixin font-whitney
+  font-family: 'Whitney SSm A', 'Whitney SSm B'
+  // 400, 500 + italic, 700
+
+h1
+  color: $color-default-font
+  margin: 0
+  font-size: 36px
+  font-weight: 400
+h2
+  font-weight: 400
+  font-size: 20px
+  color: rgb(140,140,140)
+h4
+  color: $color-default-font
+p
+  +font-whitney
+a
+  color: #3498db
+  text-decoration: none
+  font-weight: 700

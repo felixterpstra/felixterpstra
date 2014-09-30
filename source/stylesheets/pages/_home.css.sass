@@ -1,0 +1,59 @@
+.index
+  text-align: center
+  background: image-url('home-header-bg.png') 50% 0 repeat-x
+  .hero
+    width: 570px
+    text-align: center
+    display: block
+    margin: 112px auto 90px
+
+  .case-studies
+    width: 90%
+    margin: 0 auto
+    display: block
+    max-width: 1000px
+    h2
+      text-align: center
+      margin: 0 0 40px
+
+    .case-study
+      text-align: center
+      +border-radius(6px)
+      width: 49%
+      float: left
+      padding: 50px 50px 42px
+      img
+        width: 46px
+        height: 46px
+        display: block
+        margin: 0 auto 36px
+      .tagline
+        font-size: 26px
+        font-weight: 500
+      .btn-primary
+        margin-top: 50px
+
+      &#goodnest
+        background: $color-goodnest
+        margin-right: 2%
+        color: rgb(40,40,40)
+        .svg path
+          fill: green
+      &#popin
+        background: $color-popin
+        color: white
+
+  .copy-width
+    text-align: left
+    width: 60%
+    max-width: 580px
+    margin: 100px auto
+    display: inline-block
+    p
+      color: $color-default-font
+      font-size: 14px
+      line-height: 32px
+    a
+      color: $color-default-font
+      &:link, &:visited, &:hover, &:active
+        text-decoration: none
