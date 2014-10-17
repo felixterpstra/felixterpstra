@@ -11,7 +11,7 @@ $( document ).ready(function() {
         var bg = $('<div class="bg"></div>').appendTo('body');
         bg.css('opacity', 0)
         bg.animate({
-            opacity: 0.6
+            opacity: 0.8
           }, 300, 'ease-out'
         );
         $(this).find('.image').height(img.height());

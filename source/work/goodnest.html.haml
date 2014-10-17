@@ -15,6 +15,7 @@ title: 'Goodnest — Felix Terpstra'
       .article-header-title Goodnest
       .article-header-description Goodnest is a web application that makes it easy for people to get their houses cleaned. Customers use the website to book a job, giving details on house size and date.<br/>Behind the scenes our pool of cleaners tender for the job, and if they are successful they clean the customer's house.
     .image.article-header-image
+
 .article-body
   .site-width
     .article-title Three Distinct Users
@@ -33,10 +34,23 @@ title: 'Goodnest — Felix Terpstra'
     .hover-animation{data: {expandable: true, bg: true}}
       .image.full-width
         = image_tag 'goodnest/merch-dash.png'
+      .shadow
     .image-caption The first step of booking a new cleaning job where customers select the number of bed and bathrooms in their house.
-    .columns
+    .columns.last-item
       .column
         %p A customer booking a job is the most important part aspect of the application, and is the first step in the overall cleaning process. Therefore it was crucial to get it right.
         %p My first approach was a two step process, starting with house details and timing, and then moving on to payment details. As this was being designed we discovered more and more things we needed to ask the customer, and the length soon became unwieldy.
       .column.last
         %p The first concern with any checkout is customer drop-off—that is, customers leaving the process midway through, without completing. A major cause of this is perceived effort. If there are a long list of complicated fields to fill out it’s much more likely a customer will give up and leave (think of how annoying online questionnaires are!). The long initial step needed to be broken up into parts.
+
+.article-footer
+  .site-width
+    .block.first
+      .article-footer-title Get in touch
+      .article-footer-body 
+        = link_to 'felix@felixterpstra.com', 'mailto:felix@felixterpstra.com'
+        %br/
+        +44 7463 930107
+    .block
+      .article-footer-title More work
+      .article-footer-body= link_to 'Find out about Popin', '/popin'
