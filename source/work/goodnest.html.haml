@@ -48,23 +48,12 @@ title: 'Goodnest — Felix Terpstra'
       .image.full-width
         = image_tag 'goodnest/merch-dash.png'
       .shadow
-    .image-caption The cleaner's dashboard showing a list of new jobs to apply for
+    .image-caption An expanded job in a cleaner's dashboard, with the Job Summary block visible
     .copy-block
       .column
-        %p The cleaner dashboard centers around displaying lists of jobs in tabs. The goal was to provide enough information about the job upfront to allow the cleaner to decide if they were interested in the job. They could then click each job to find out additional information. This would enable for easy scanning of what would become an increasingly long list of jobs as the service grew.
-        %p After exploring a number of options I decided that jobs would 
-        give an at-a-glance overview of the job to allow easy scanning
-        I spent a lot of time optimising the appearance of a single job, first using a modal popup before shifting to an expand inline view.
-
-        %p During wireframing I experimented with various ways to show a job’s state to the cleaner. A job has essentially four states: New, Tendering, Booked and Completed. People naturally associate objects arranged from left to right as a being in a continuum, with the start on the left and finish on right, so with my first wireframes I applied the same principle to displaying jobs.
-        %p First wireframe of the cleaners dashboard, showing columns for the various states of a job. Job details would be revealed in a modal view.
-        %p The design showed a great overview of the state of every job, however it wasn’t quite right. Displaying all the job states in columns meant a lot of information was visible all at once, making it hard for an inexperienced user to know what to focus on or what to interact with. 
-        %p Additionally, dividing the screen four ways did not allow much room for an interface for interacting with the jobs and displaying more detail. In the end, this approach seemed better for an admin user than a cleaner. Back to the drawing board.
+        %p The cleaner dashboard centers around displaying lists of jobs in tabs. The goal was to provide enough information about the job upfront to allow the cleaner to decide if they were interested in the job. They could then click each job to expand it inline, exposing additional information. This would enable for easy scanning of what would become an increasingly long list of jobs as the service grew.
       .column.last
-        %p Borrowing from the interface for booking a new job, I separated each job state out into it’s own tab. This allowed more room for interactive elements, such as the Hide Job button, and plenty of space for the job to expand inline to display additional details, removing the need for a modal view.
-        %p Interacting with a job will commonly shift it to a new tab, for example when a job is applied for it shifts from New Jobs to Pending. This could be confusing for people if they hadn’t yet grasped the where the job would be shown next, so a little animation was introduced to link the job to it’s destination.
-        %p The visual layer was designed on top of the wireframes, bringing the look in line with the rest of the application.
-        %p The same layout and tab structure was applied to the customers dashboard, allowing them to manage their upcoming cleans and review their past ones.
+        %p I designed the look of a job to be consistant across each tab of the dashboard (New Jobs, Pending, Bookings and History), displaying different blocks of information in the expanded view depending on what what the cleaner needed to see at that time.
 
     .article-title Mobile
     .image-left
