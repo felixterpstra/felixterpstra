@@ -13,35 +13,68 @@ title: 'Goodnest — Felix Terpstra'
   .site-width
     .article-header-container
       .article-header-title Goodnest
-      .article-header-description Goodnest is a web application that makes it easy for people to get their houses cleaned. Customers use the website to book a job, giving details on house size and date.<br/>Behind the scenes our pool of cleaners tender for the job, and if they are successful they clean the customer's house.
+      .article-header-description 
+        Goodnest is a web application that makes it easy for people to get their houses cleaned. Customers use the website to book a job, giving details on house size and date. Behind the scenes, a pool of cleaners are able to view and tender for cleaning jobs, and manage their upcoming bookings.
     .image.article-header-image
 
 .article-body
   .site-width
-    .article-title Three Distinct Users
-    .columns
+    .copy-block
       .column
-        %p Three main groups of users interact with the product: Customers, cleaners and administrators. It was important to understand what each user was trying to achieve and what they needed to be informed of, and to design interfaces that met these requirements.
-        %p I started by listing the goals for each user group. Customers would want a no-fuss way to book their cleans, and a simple way to manage them once they were booked in. They don’t want to spend a lot of time in the app.
-        %p Cleaners required a more complicated interface. They need to see a list of available jobs and apply for them, see which jobs they had applied for and which had been confirmed, and a history of jobs they’d completed.
+        %p My first step was to outline the main groups of people interacting with the product: customers, cleaners and administrators. Understanding in detail the needs of each of these users was crucial to designing an interface that would be successful in the real world.
+        %p Each group of customers had very different goals while using the application. Customers want a no-fuss way to book their cleans and a simple way to manage them, and only interact with the app occasionally. Their main experience with Goodnest is with the actual cleaner, not the app. Cleaners need to see details of new jobs and decide which to apply for, manage their confirmed bookings, and see a history of their completed jobs. They interact with the app daily as they are motivated by an incoming stream of work. Administrators need an overview of the system across all users and jobs, and the ability to fix problems as they arise.
       .column.last
-        %p Finally, administrators needed an overview of the whole system in action with the ability to fix problems as they arose and deal with the business processes required to keep the service running.
-        %p Given the goals of each group, I mapped out the information architecture of the app using flow diagrams, organised by views, to give a clear idea of where particular features would fit in relation to each other.
-        %p This made actually designing the interfaces far simpler, as there was a defined list of features each view needed to contain, and the broad context of where each fitted within the app.
-    .divider
-      .icon
-    .article-title Booking a Job
+        %p 
+          I mapped out the information architecture of the app using flow diagrams, organised by views and by each of the user groups, to give a clear idea of where particular features would fit in relation to each other. 
+          %br 
+          Next I drew up simple wireframes of each screen using the information in the flow diagrams. Wireframing an interface allows layout ideas to be quickly tested and iterated upon, without having to produce a full-fidelity mockup at each step.
+          %br
+          Having locked in the layout design of the final look and feel for the app could begin, including branding, colour schemes, typography and interaction design.
+
+    .article-title Booking a Clean
+    .hover-animation#booking-a-job{data: {expandable: true, bg: true}}
+      .image.full-width
+        = image_tag 'goodnest/mock-quote-process-1-desktop.png'
+      .shadow
+    .image-caption Customers book a job by selecting the number of bedrooms and bathrooms in their house
+    .copy-block
+      .column
+        %p The heart of the app is the customer booking process. My primary goal was to reduce the number of people leaving the process without completing. The information I needed to collect from the customer during this process was quite large and would have required a very long form. 
+      .column.last
+        %p I decided instead to split the form fields into separate steps, grouped by type. This would make the form seem less daunting and allow the customer to focus on each step in turn, reducing the number of incomplete bookings and helping with the accuracy of information collected.
+
+    .article-title Managing a Clean
     .hover-animation{data: {expandable: true, bg: true}}
       .image.full-width
         = image_tag 'goodnest/merch-dash.png'
       .shadow
-    .image-caption The first step of booking a new cleaning job where customers select the number of bed and bathrooms in their house.
-    .columns.last-item
+    .image-caption The cleaner's dashboard showing a list of new jobs to apply for
+    .copy-block
       .column
-        %p A customer booking a job is the most important part aspect of the application, and is the first step in the overall cleaning process. Therefore it was crucial to get it right.
-        %p My first approach was a two step process, starting with house details and timing, and then moving on to payment details. As this was being designed we discovered more and more things we needed to ask the customer, and the length soon became unwieldy.
+        %p The cleaner dashboard centers around displaying lists of jobs in tabs. The goal was to provide enough information about the job upfront to allow the cleaner to decide if they were interested in the job. They could then click each job to find out additional information. This would enable for easy scanning of what would become an increasingly long list of jobs as the service grew.
+        %p After exploring a number of options I decided that jobs would 
+        give an at-a-glance overview of the job to allow easy scanning
+        I spent a lot of time optimising the appearance of a single job, first using a modal popup before shifting to an expand inline view.
+
+        %p During wireframing I experimented with various ways to show a job’s state to the cleaner. A job has essentially four states: New, Tendering, Booked and Completed. People naturally associate objects arranged from left to right as a being in a continuum, with the start on the left and finish on right, so with my first wireframes I applied the same principle to displaying jobs.
+        %p First wireframe of the cleaners dashboard, showing columns for the various states of a job. Job details would be revealed in a modal view.
+        %p The design showed a great overview of the state of every job, however it wasn’t quite right. Displaying all the job states in columns meant a lot of information was visible all at once, making it hard for an inexperienced user to know what to focus on or what to interact with. 
+        %p Additionally, dividing the screen four ways did not allow much room for an interface for interacting with the jobs and displaying more detail. In the end, this approach seemed better for an admin user than a cleaner. Back to the drawing board.
       .column.last
-        %p The first concern with any checkout is customer drop-off—that is, customers leaving the process midway through, without completing. A major cause of this is perceived effort. If there are a long list of complicated fields to fill out it’s much more likely a customer will give up and leave (think of how annoying online questionnaires are!). The long initial step needed to be broken up into parts.
+        %p Borrowing from the interface for booking a new job, I separated each job state out into it’s own tab. This allowed more room for interactive elements, such as the Hide Job button, and plenty of space for the job to expand inline to display additional details, removing the need for a modal view.
+        %p Interacting with a job will commonly shift it to a new tab, for example when a job is applied for it shifts from New Jobs to Pending. This could be confusing for people if they hadn’t yet grasped the where the job would be shown next, so a little animation was introduced to link the job to it’s destination.
+        %p The visual layer was designed on top of the wireframes, bringing the look in line with the rest of the application.
+        %p The same layout and tab structure was applied to the customers dashboard, allowing them to manage their upcoming cleans and review their past ones.
+
+    .article-title Mobile
+    .image-left
+      .column
+        .mobile-mock
+          = image_tag 'goodnest/new-jobs-view.png'
+      .column.mobile-copy
+        %p Having the application work well on mobile was particularly important for cleaners, as they would need to check the details for upcoming jobs while out in the field. 
+        %p It became apparent early on that the structure of the desktop layout wouldn’t translate well to the smaller screen size of mobile devices. Working with the development team, we opted for an adaptive platform that would detect the device being used (i.e. a phone or tablet) and supply a different interface from the desktop. 
+        %p This strategy worked well and produced interfaces tailored to not only the smaller screen space but also the different environments that phones and tablets are used in. 
 
 .article-footer
   .site-width

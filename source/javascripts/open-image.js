@@ -8,7 +8,7 @@ $( document ).ready(function() {
       img = $(this).find('img');
 
       if ($(".bg").length == 0){
-        var bg = $('<div class="bg"></div>').appendTo('body');
+        var bg = $('<div class="bg"></div>').appendTo('.article-body');
         bg.css('opacity', 0)
         bg.animate({
             opacity: 0.8
