@@ -5,20 +5,21 @@ title: 'Felix Terpstra — User Interface Designer'
 .hero
   %h1 I design and build interfaces for digital products and services
 
-.case-studies
-  %h2 Here is my latest work
-  .case-study#goodnest
-    = image_tag 'svg/logo-goodnest.svg', size: '46x46', class: 'svg'
-    .tagline A fresh take on a clean home
-    = link_to '/work/goodnest', class: 'btn-primary btn-work' do
-      .icon
-      %span Read about Goodnest
-  .case-study#popin
-    = image_tag 'svg/logo-popin.svg', size: '46x46', class: 'svg'
-    .tagline The real world social network
-    .btn-primary.btn-work.btn-disabled
-      .icon
-      %span Coming soon
+.site-width
+  .case-studies
+    %h2 Here is my latest work
+    .case-study#goodnest
+      = image_tag 'svg/logo-goodnest.svg', size: '46x46', class: 'svg'
+      .tagline A fresh take on a clean home
+      = link_to '/work/goodnest', class: 'btn-primary btn-work' do
+        .icon
+        %span Read about Goodnest
+    .case-study#popin
+      = image_tag 'svg/logo-popin.svg', size: '46x46', class: 'svg'
+      .tagline The real world social network
+      .btn-primary.btn-work.btn-disabled
+        .icon
+        %span Coming soon
 
 .copy-width
   %p
