@@ -52,6 +52,40 @@ p
   line-height: 24px
   color: rgb(50,50,50)
 a
-  color: #3498db
-  text-decoration: none
-  font-weight: 700
+  color: $color-default-font
+  font-weight: 900
+  &:link, &:visited, &:hover, &:active
+    text-decoration: none
+
+
+// ICO MOON
+
+@font-face
+  font-family: 'icomoon'
+  src: url('/fonts/icomoon.eot?qrsrwx')
+  src: url('/fonts/icomoon.eot?#iefixqrsrwx') format("embedded-opentype"), url('/fonts/icomoon.woff?qrsrwx') format("woff"), url('/fonts/icomoon.ttf?qrsrwx') format("truetype"), url('/fonts/icomoon.svg?qrsrwx#icomoon') format("svg")
+  font-weight: normal
+  font-style: normal  
+
+.icon-back:before
+  content: "\62"
+  font-family: 'icomoon'
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  font-size: 10px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+// Gradient mixin
+=gradient($mode,$direction,$from,$to,$oldDirection:null)
+  @if($oldDirection != null)
+    background-image: -webkit-gradient($mode, #{$oldDirection}, from($from),to($to))   
+  background-image: -webkit-#{$mode}-gradient($direction, $from, $to)
+  background-image: -moz-#{$mode}-gradient($direction, $from, $to)
+  background-image: -o-#{$mode}-gradient($direction, $from, $to)
+  background-image: -ms-#{$mode}-gradient($direction, $from, $to)
+  background-image: #{$mode}-gradient($direction, $from, $to)

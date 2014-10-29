@@ -1,6 +1,18 @@
 .index
   text-align: center
   background: image-url('home-header-bg.png') 50% 0 repeat-x
+
+  .header-bg
+    width: 100%
+    height: 460px
+    background: black
+    position: absolute
+    top: 0
+    z-index: -10
+    background-color: #ffffff
+    +gradient(linear,top,rgb(239, 239, 239),rgb(255, 255, 255),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#efefef', EndColorStr='#ffffff')
+
   .hero
     width: 570px
     text-align: center
@@ -51,7 +63,3 @@
       color: $color-default-font
       font-size: 14px
       line-height: 32px
-    a
-      color: $color-default-font
-      &:link, &:visited, &:hover, &:active
-        text-decoration: none
